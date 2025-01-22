@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotheque V1</title>
+</head>
+
+
+<body>
+
+  <script type="text/javascript" >
+// ajout livre
+function ajouterLivreUI() {
+const titre = prompt("Entrez le titre du livre :");
+const auteur = prompt("Entrez l'auteur du livre :");
+const annee = parseInt(prompt("Entrez l'année de publication :"));
+const genre = prompt("Entrez le genre du livre :");
+bibliotheque.ajouterLivre(titre, auteur, annee, genre);
+afficherResultat(`Livre ajouté : ${titre} par ${auteur}`);
+}
+
+// afficher livre
+function afficherLivresUI() {
+let resultat = "Liste des livres :\n";
+bibliotheque.livres.forEach(livre => {
+resultat += `${livre.titre} par ${livre.auteur} (${livre.annee}) - Genre : ${livre.genre}\n`;
+});
+afficherResultat(resultat);
+}
+
+//recherche livre
+function rechercherLivreUI() {
+const titre = prompt("Entrez le titre du livre à rechercher :");
+const livre = bibliotheque.livres.find(l => l.titre.toLowerCase() === titre.toLowerCase());
+if (livre) {
+afficherResultat(`Livre trouvé : ${livre.titre} par ${livre.auteur}`);
+} else {
+afficherResultat("Aucun livre trouvé avec ce titre.");
+}
+}
+
+//emprunter livre
+function emprunterLivreUI() {
+const titre = prompt("Entrez le titre du livre à emprunter :");
+const nomEmprunteur = prompt("Entrez votre nom :");
+bibliotheque.emprunterLivre(titre, nomEmprunteur);
+afficherResultat(`Tentative d'emprunt : ${titre} par ${nomEmprunteur}`);
+}
+function afficherStatistiquesUI() {
+let resultat = "Statistiques de la bibliothèque :\n";
+resultat += `Nombre total de livres : ${bibliotheque.livres.length}\n`;
+// Ajoutez d'autres statistiques ici
+afficherResultat(resultat);
+}
+function afficherResultat(message) {
+document.getElementById('resultat').innerText = message;
+}
+    </script>
+    
+</body>
+</html>
