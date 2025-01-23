@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='style.js'></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <a href="#presentation">Presentation</a> |
+            <a href="#competences">Tableau de competences</a> |
+            <a href="#contact">Contact</a>
+        </header>
+        </nav>
+
+        <main class="bg-blue">
+            <!-- La section A propos -->
+            
+           
+            <img src="P9120187.JPG" alt="Image de profil" width="150" height="150">
+            <section id="presentation">
+               
+                <h2 class="center_titles"> Presentation </h2>
+                <!-- Les paragraphes -->
+                <p class="first_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+                <!-- <img src="image1.jpg" alt="Beau ciel papillons"> -->
+            </section>
+
+            <h3 class="left_titles">Tableau de competences</h3>
+
+           
+            <section id="tableau de competences">
+                
+               <table>
+                <tr><th> competences        |</th> <th>niveau  |</th> <th>annees experience |</th></tr>
+                <tr><td> Installation FH    |</td> <td> avance |</td> <td> 4                |</td></tr>
+                <tr><td> Gestion de projets |</td> <td>avance  |</td> <td> 10               |</td></tr>
+               </table>
+                
+            </section>
+            <h4 class="center_titles">Contact</h4>
+            <section id="contact">
+                <form action="/process_formulaire" method="GET">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" ><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value=""><br><br>
+                    <label for="my_file">Choisis un fichier</label>
+                    <input type="file" id="" name=""><br><br>
+                   <input type="submit" value="Envoyer">
+                  </form>               
+                </section>
+    
+    <footer>
+        <div>
+            <p>&copy; 2024 Front-End Bootcamp. All rights reserved.</p>
+            <p><a href="#top">Back to top</a></p>
+        </div>
+    </footer>
+</body>
+</html>

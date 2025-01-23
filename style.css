@@ -1,0 +1,84 @@
+/* Selectionner un element html 
+
+selection{ regle_css: valeur}
+
+1- Balise html
+nom_de_la_balise{}
+*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* En-tete */
+header{
+    background: linear-gradient(to right, bleue, #4facfe, rgb(11, 80, 19));
+    color: white;
+    padding: 20px 0;
+    text-align:center;
+}
+
+nav{
+    background-color: #333;
+    color: rebeccapurple;
+    padding: 10px;
+    display: flex; /* Initialisation de la disposition en flex*/
+    justify-content: center;
+    gap: 15px; 
+}
+ /* Les selecteurs combines 
+ 1- Selectionner les elements a l'interieur d'un autre
+ balise_parent balise_enfant{propiete_css: valeur}
+ */
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Selectionner un element html 
+2- Par sa Classe 
+.nom_de_la_classe{}
+*/
+.first_paragraph{
+    color:darkblue;
+    margin-top: 100px;
+}
+
+#presentation{
+    display:flex;
+    text-align: justify;
+}
+
+.center_titles{
+    text-align: center;
+    text-transform: uppercase;
+}
+/* Selectionner un element html 
+2- Par son id 
+#valeur_de_l_id{}
+*/
+#top{
+    color:chartreuse;
+}
+
+#contact{
+    margin-bottom: 10px;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333; /* Fond sombre */
+    color: white; /* Texte blanc */
+    text-align: center; /* Centre le texte */
+    padding: 10px 0; /* Espace interne */
+    margin-top: auto; /* Pousse le footer en bas */
+    
+}
+
+footer a {
+    color: #00f2fe; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Supprime le soulignement */
+}
