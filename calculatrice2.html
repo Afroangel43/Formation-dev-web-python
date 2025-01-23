@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='style2.css'>
+    <title>Calculatrice 2</title>
+</head>
+<body>
+    <h3>A Simple Calculator Using HTML</h3>
+<form Name="calc"> </form>
+
+<table id="calc" border="2">
+    <tr>
+    <td colspan=5><input id="btn" name="display" type="text"></td>
+    <td style="display:none"><input name="M" type="number"></td>
+    </tr>
+    </table>
+
+    <tr>
+        <td><input id="btn" type=button value="MC"></td>
+        <td><input id="btn" type=button value="0"></td>
+        <td><input id="btn" type=button value="1"></td>
+        <td><input id="btn" type=button value="2"></td>
+        <td><input id="btn" type=button value="+"></td><br>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="MS"></td>
+        <td><input id="btn" type=button value="3"></td>
+        <td><input id="btn" type=button value="4"></td>
+        <td><input id="btn" type=button value="5"></td>
+        <td><input id="btn" type=button value="-"></td><br>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="MR"></td>
+        <td><input id="btn" type=button value="6"></td>
+        <td><input id="btn" type=button value="7"></td>
+        <td><input id="btn" type=button value="8"></td>
+        <td><input id="btn" type=button value="x"></td><br>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="M+"></td>
+        <td><input id="btn" type=button value="9"></td>
+        <td><input id="btn" type=button value="±"></td>
+        <td><input id="btn" type=button value="="></td>
+        <td><input id="btn" type=button value="/"></td><br>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="1/x"></td>
+        <td><input id="btn" type=button value="."></td>
+        <td><input id="btn" type=button value="x2"></td>
+        <td><input id="btn" type=button value="√"></td>
+        <td><input id="btn" type=button value="C"></td><br>
+        </tr>
+
+        <tr>
+            <td colspan=5><input id="btn" name="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"></td>
+            <td style="display:none"><input name="M" type="number"></td>
+            </tr>
+            <tr>
+                <td><input id="btn" type=button value="MC" OnClick="calc.M.value=''"></td>
+                <td><input id="btn" type=button value="0" OnClick="calc.display.value+='0'"></td>
+                <td><input id="btn" type=button value="1" OnClick="calc.display.value+='1'"></td>
+                <td><input id="btn" type=button value="2" OnClick="calc.display.value+='2'"></td>
+                <td><input id="btn" type=button value="+" OnClick="calc.display.value+='+'"></td>
+                </tr>
+                <tr>
+                <td><input id="btn" type=button value="MS" OnClick="calc.M.value=calc.display.value"></td>
+                <td><input id="btn" type=button value="3" OnClick="calc.display.value+='3'"></td>
+                <td><input id="btn" type=button value="4" OnClick="calc.display.value+='4'"></td>
+                <td><input id="btn" type=button value="5" OnClick="calc.display.value+='5'"></td>
+                <td><input id="btn" type=button value="-" OnClick="calc.display.value+='-'"></td>
+                </tr>
+                <tr>
+                <td><input id="btn" type=button value="MR" OnClick="calc.display.value=calc.M.value"></td>
+                <td><input id="btn" type=button value="6" OnClick="calc.display.value+='6'"></td>
+                <td><input id="btn" type=button value="7" OnClick="calc.display.value+='7'"></td>
+                <td><input id="btn" type=button value="8" OnClick="calc.display.value+='8'"></td>
+                <td><input id="btn" type=button value="x" OnClick="calc.display.value+='*'"></td>
+                </tr>
+</body>
+</html>

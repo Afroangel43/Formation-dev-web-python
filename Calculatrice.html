@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    
+</head>
+<body>
+
+    <form >
+        <input type="text" id="box1"> <br>
+        <input type="text" id="box2"> <br>
+       <input type="text" id="addition">
+        <input type="button" value="+" onclick="calcSum()"><br>
+        <input type="text" id="soustraction">
+        <input type="button" value="-" onclick="calcSubstract()"> <br> 
+        <input type="text" id="multiplication">
+        <input type="button" value="*" onclick="calcMult()"> <br>
+        <input type="text" id="division">
+        <input type="button" value="/" onclick="calcDiv()">  <br> 
+
+    </form>
+    <script type="text/javascript">
+
+        //addition 
+        
+
+        function calcSum() {
+
+            let box1 = document.getElementById("box1").value;
+          let  box2 = document.getElementById("box2").value;
+          let  sum =Number(box1) + Number(box2);
+            document.getElementById("addition").value = sum;
+            console.log(box1);
+            console.log(box2);
+     
+        }
+
+        //soustraction
+
+        function calcSubstract() {
+
+let box1 = document.getElementById("box1").value;
+let  box2 = document.getElementById("box2").value;
+let  substract =Number(box1) - Number(box2);
+document.getElementById("soustraction").value = substract;
+console.log(box1);
+console.log(box2);
+}
+
+//Multiplication
+
+function calcMult() {
+
+let box1 = document.getElementById("box1").value;
+let  box2 = document.getElementById("box2").value;
+let  Mult =Number(box1) * Number(box2);
+document.getElementById("multiplication").value = Mult;
+console.log(box1);
+console.log(box2);
+
+}
+
+//Division
+
+function calcDiv() {
+
+let box1 = document.getElementById("box1").value;
+let  box2 = document.getElementById("box2").value;
+let  Div =Number(box1) / Number(box2);
+document.getElementById("division").value = Div;
+console.log(box1);
+console.log(box2);
+
+if (box2==0) {
+
+    alert ("Infinity")
+    
+} else {
+
+    document.getElementById("division").value = Div
+}
+
+}
+
+    </script>
+</body>
+</html> 
